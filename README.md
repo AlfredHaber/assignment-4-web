@@ -35,7 +35,3 @@ This project uses **Open-Meteo**, a public weather API:
 - `script.js` — API requests and dynamic data display
 - `screenshot.png` — weather dashboard screenshot (representative API response captured for presentation/testing)
 - `.gitignore` — prevents accidentally committing environment files
-
-## Submission
-
-Upload the ZIP and add a link to your own GitHub repository. A repository link cannot be generated from this ZIP until you push the files to GitHub.
