@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple live weather dashboard by city.">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <span class="brand-icon" aria-hidden="true">☁</span>
+      <h1>Weather Dashboard</h1>
+      <p>Check the current weather in any city.</p>
+    </header>
+
+    <form id="search-form" class="search-form">
+      <label for="city-input">Enter a city</label>
+      <div class="search-row">
+        <input id="city-input" type="text" placeholder="e.g. Paris" value="Paris" autocomplete="off" required>
+        <button id="search-button" type="submit">Search</button>
+      </div>
+    </form>
+
+    <div id="loading" class="notice loading" role="status" aria-live="polite" hidden>
+      <span class="spinner" aria-hidden="true"></span>
+      Loading weather...
+    </div>
+    <p id="error" class="notice error" role="alert" hidden></p>
+
+    <section id="weather-card" class="weather-card" aria-label="Current weather" hidden>
+      <div class="location-row">
+        <div>
+          <p class="eyebrow">CURRENT WEATHER</p>
+          <h2 id="city-name"></h2>
+        </div>
+        <span class="live-tag">Live weather</span>
+      </div>
+
+      <div class="main-weather">
+        <span id="weather-icon" class="weather-icon" role="img" aria-label="Weather icon"></span>
+        <div>
+          <div class="temperature"><span id="temperature"></span><span class="degree">°C</span></div>
+          <p id="description" class="description"></p>
+        </div>
+      </div>
+
+      <div class="details">
+        <div class="detail">
+          <span class="detail-label">Feels like</span>
+          <strong id="feels-like"></strong>
+        </div>
+        <div class="detail">
+          <span class="detail-label">Humidity</span>
+          <strong id="humidity"></strong>
+        </div>
+        <div class="detail">
+          <span class="detail-label">Wind speed</span>
+          <strong id="wind"></strong>
+        </div>
+      </div>
+    </section>
+
+    <p class="footer">Weather data provided by <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a>.</p>
+  </main>
+</body>
+</html>
